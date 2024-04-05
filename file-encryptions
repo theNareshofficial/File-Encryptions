@@ -1,0 +1,31 @@
+#! /bin/python
+
+from lib.Argument import Argument
+import hashlib
+import sys
+
+a = Argument(sys.argv)
+
+print(a.hashOptions(['-f']))
+
+# name = input("Enter User name : ")
+# pswd = input("Enter your password : ")
+
+# input_bytes = pswd.encode()
+
+# hash_obj = hashlib.sha512()
+
+# hash_obj.update(input_bytes)
+
+# hash_value = hash_obj.hexdigest()
+
+# etc = "!@#$%^&*()_+"
+
+# store = (hash_value + etc) 
+
+# # print(pswd)
+# # print(hash_obj)
+# print(hash_value)
+# print(name)
+# print(store)
+# print("Length : ",len(store))
