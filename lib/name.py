@@ -9,5 +9,6 @@ def os_name():
                     os.system("cls")
           else:
                     os.system("clear")
+                    
 
 os_name()
