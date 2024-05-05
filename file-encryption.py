@@ -76,6 +76,7 @@ def encrypt_file(file_path, algorithm, key):    # Encrypt function
     with open(encrypted_file_path, 'wb') as f:
         f.write(salt + iv + cipher_text)         # Store the salt and IV in the beginning of the file for later decryption
 
+         # Enable for remove original file    
         #os.remove(file_path)        # remove original file
 
     print(f"File '{file_path}' encrypted successfully as '{encrypted_file_path}'")
