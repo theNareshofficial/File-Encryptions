@@ -2,6 +2,7 @@
 <p align="center">
             <img src="assests/file-encryption-Banner.png" width="1000px">
 </p>
+
 # File Encryptions Tool
 
 This file encryption tool allows you to securely encrypt and decrypt various text file formats using a customizable security key. The encrypted output is generated with strong cryptographic practices, including the Advanced Encryption Standard (AES), hash functions, and random salt, ensuring robust security. After encrypting, the output file has the same name as the original file with an ".enc" extension. For example, if you encrypt hello.txt, the resulting encrypted file will be hello.txt.enc.
