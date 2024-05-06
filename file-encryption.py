@@ -86,9 +86,9 @@ def decrypt_file(file_path, key):  # Decrypt function
 
     # Read the encrypted data
     with open(file_path, 'rb') as f:
-        salt = f.read(16)  # Extract the salt
-        iv = f.read(16)  # Extract the IV
-        cipher_text = f.read()  # The rest is cipher text
+        salt = f.read(16)           # Extract the salt
+        iv = f.read(16)             # Extract the IV
+        cipher_text = f.read()      # The rest is cipher text
 
     # Derive the key from the password and salt
     kdf = PBKDF2HMAC(
@@ -126,18 +126,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description=
         "Encrypt or Decrypt a file with a specified algorithm and key.")
-    parser.add_argument("--file",
-                        type=str,
-                        required=True,
-                        help="Path to the file to encrypt or decrypt.")
-    parser.add_argument("--mode",
-                        choices=["encrypt", "decrypt"],
-                        required=True,
-                        help="Whether to encrypt or decrypt.")
-    parser.add_argument("--algorithm",
-                        type=str,
-                        default="AES",
-                        help="Encryption algorithm to use. Default is AES.")
+    parser.add_argument("--file", type=str, required=True, help="Path to the file to encrypt or decrypt.")
+    parser.add_argument("--mode", choices=["encrypt", "decrypt"], required=True, help="Whether to encrypt or decrypt.")
+    parser.add_argument("--algorithm", type=str, default="AES", help="Encryption algorithm to use. Default is AES.")
 
     args = parser.parse_args()
 
