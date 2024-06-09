@@ -48,6 +48,18 @@ options:
                         Encryption algorithm to use. Default AES.                                                                      
 ```
 
+# Dockerfile Installation
+```
+# Docker image build command
+$ docker build -t file-encryption.py
+
+# Docker Encrypt command
+$ docker run -t file-encryption.py --file hello.txt --mode encrypt --algorithm AES
+
+# Docker Decrypt command
+$ docker run -t file-encryption.py --file hello.txt.enc --mode decrypt --algorithm AES
+```
+
 # Tested OS
 - Windows
 - Linux
